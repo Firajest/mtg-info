@@ -1,0 +1,48 @@
+{{!-- <form id="searchForm" action="/result" method="POST">
+  <ul>
+    <li>
+      <label>Enter card name to search:</label>
+      <input type="text" placeholder="card name" name="cardName" required>
+    </li>
+
+    <li>
+      <label>Sort by:</label>
+      <select id="sort" class="form-control" >
+        <option selected></option>
+        <option value="prices.usd">Price</option>
+        <option value="cmc">Converted manacost</option>
+        <option value="name">A-z</option>
+      </select>
+    </li>
+  </ul>
+  <input type="submit" value="search">
+</form>
+<div id="searchResult"></div> --}}
+
+<h2>Here you can find cards of MTG</h2>
+<form id="searchForm" action="/result" method="POST">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-10 col-form-label">Enter card name to search:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="card name" name="cardName" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-5 col-form-label">Sort by:</label>
+    <div class="col-sm-10">
+      <select id="sort" class="form-control">
+        <option selected></option>
+        <option value="prices.usd">Price</option>
+        <option value="cmc">Converted manacost</option>
+        <option value="name">A-z</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-15" style="margin-top: 37px;">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+  </div>
+</form>
+<br>
+<div id="searchResult"></div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- <link rel="stylesheet" href="/stylesheets/normalize.css"> --}}
+  <link rel="stylesheet" href="/stylesheets/application.css">
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script defer src="/js/application.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  {{#if login}}
+  <tr>
+    <td class="headerButton" type="submit"> <a href="/user/lk/{{email}}">Welcome, {{login}}!</a></td>
+    <br>
+    <td class="headerButton" type="submit"> <a href="/user/logout">Logout</a></td>
+    <td class="headerButton" type="submit"><a href="/">Home</a></td>
+  </tr>
+  {{else}}
+  <tr>
+    <td class="headerButton" type="submit"> <a href="/user/register">Sign up!</a></td>
+    <td class="headerButton" type="submit"> <a href="/user/login">Sign in!</a></td>
+    <td class="headerButton" type="submit"><a href="/">Home</a></td>
+  </tr>
+  {{/if}}
+  {{!-- {{#if login}}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active headerButton" href="/user/lk/{{email}}">Welcome, {{login}}!</a>
+        <a class="nav-item nav-link headerButton" href="/user/logout">Logout</a>
+        <a class="nav-item nav-link headerButton" href="/">Home</a>
+      </div>
+    </div>
+  </nav>
+  {{else}}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active headerButton" href="/user/register">Sign up!</a>
+        <a class="nav-item nav-link headerButton" href="/user/login">Sign in!</a>
+        <a class="nav-item nav-link headerButton" href="/">Home</a>
+      </div>
+    </div>
+  </nav>
+  {{/if}} --}}
+  {{{body}}}
+  {{!-- <div id="cardContainer"></div> --}}
+</body>
+
+</html>

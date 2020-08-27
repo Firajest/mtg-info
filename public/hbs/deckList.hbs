@@ -1,0 +1,5 @@
+<ul>
+  {{#each deckList}}
+  <li><a href="/deck/{{this._id}}">{{this.name}}</a>, format: {{this.gameFormat}}</li>
+  {{/each}}
+</ul>

@@ -1,0 +1,31 @@
+{{!-- <form action="/deck" method="post" name="newDeck">
+  <input name="deckName" id="deckName" type="text" placeholder="Enter a deck name">
+  <button type="submit">Create a deck</button>
+</form> --}}
+{{#each result.sortedRes}}
+<div class="mainSearchResultContainer">
+  <div class="textCardContainer"></div>
+  <form class="textContainer" method="post" action="/deck/addCard">
+    <ul class="textList">
+      <li class="hidden" id="{{this.id}}">{{this.id}}</li>
+      <li id="{{this.name}}"><strong>Name: </strong>{{this.name}}</li>
+      <li id="{{this.mana_cost}}"><strong>Manacost:</strong> {{this.mana_cost}}</li>
+      <li id="{{this.cmc}}"><strong>Converted manacost:</strong> {{this.cmc}}</li>
+      <li id="{{this.type_line}}"><strong>Type: </strong>{{this.type_line}}</li>
+      <li id="{{this.oracle_text}}"><strong>Text: </strong>{{this.oracle_text}}</li>
+      <li id="{{this.flavor_text}}"><strong>Flavor text: </strong>{{this.flavor_text}}</li>
+      <li id="{{this.set_name}}"><strong>Set: </strong>{{this.set_name}}</li>
+      <li id="{{this.prices.usd}}"><strong>Price: </strong>{{this.prices.usd}}$</li>
+      {{#if ...login}}
+      <button name="addCardToDeck">Add to deckbuilder</button>
+      {{/if}}
+    </ul>
+  </form>
+  <div id="emptyDiv"></div>
+
+  <div class="imgCardContainer">
+    <img src="{{this.image_uris.small}}" alt="{{this.name}}" />
+  </div>
+</div>
+{{/each}}
+</div>

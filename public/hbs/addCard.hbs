@@ -1,0 +1,17 @@
+<form name="subForm" action="/deck/addCard" method="POST">
+
+  <select name="deckName">
+    {{#each deck}}
+    <option value="{{name}}">{{name}}, {{this.gameFormat}}</option>
+    {{/each}}
+  </select>
+
+  <select name="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+
+  <input type="submit" value="Add to deck">
+</form>

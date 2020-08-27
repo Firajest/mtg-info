@@ -1,0 +1,55 @@
+.textList {
+  list-style-type: none;
+}
+.mainSearchResultContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.textCardContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+.imgCardContainer {
+  display: flex;
+  align-self: center;
+  margin-left: 1%;
+  margin-right: 10%;
+  align-items: baseline;
+  max-width: 30%;
+}
+#searchForm {
+  display: flex;
+  margin-right: 20%;
+  justify-content: center;
+  max-height: 50px;
+}
+#mainContainerBtn {
+  max-width: 200px;
+  margin-left: 40px;
+}
+.hidden {
+  display: none;
+}
+li {
+  list-style-type: none; /* Убираем маркеры */
+  padding-left: 1%;
+  max-width: 60%;
+ }
+ ul {
+  padding-left: 2%;
+ }
+ #thisDeck {
+  display: flex;
+  align-items: baseline;
+  align-content: space-between;
+  flex-direction: row;
+}
+.showDeck-left {
+  flex-grow: 0.3;
+}
+.showDeck-right {
+  margin-left: 8%;
+  flex-grow: 0.7;
+}

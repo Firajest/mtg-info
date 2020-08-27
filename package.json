@@ -1,0 +1,44 @@
+{
+  "name": "self-assessment-rest",
+  "version": "1.0.0",
+  "description": "Пожалуйста, постарайтесь справиться с этим заданием за 3 часа.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "run dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firajest/self-assessment-rest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Firajest/self-assessment-rest/issues"
+  },
+  "homepage": "https://github.com/Firajest/self-assessment-rest#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.20",
+    "mtgsdk": "^0.4.3",
+    "passport": "^0.4.1",
+    "path": "^0.12.7",
+    "session-file-store": "^1.4.0"
+  }
+}

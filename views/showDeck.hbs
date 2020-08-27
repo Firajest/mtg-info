@@ -1,0 +1,78 @@
+<div id="thisDeck">
+
+  <div class="showDeck-left">
+    <h4>Total price for deck: {{totalPrice}}$</h4>
+    <h4>Cards total: {{cardsTotal}}</h4>
+    {{#each deck.cards}}
+    <div class="mainSearchResultContainer">
+      <div class="textCardContainer">
+        <ul class="textList">
+          <li class="hidden" id="{{this.id}}">{{this.id}}</li>
+          <li id="{{this.name}}"><strong>Name: </strong>{{this.name}}</li>
+          <li id="{{this.quantity}}"><strong>Quantity: </strong>{{this.quantity}}</li>
+          <li id="{{this.price}}"><strong>Price: </strong>{{this.price}}$ ({{this.stackPrice}}$ for stack)</li>
+        </ul>
+      </div>
+      <div class="imgCardContainer">
+        <img src="{{this.image}}" alt="{{this.name}}" />
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+  <div class="showDeck-right">
+    <div id="searchFormDiv">
+      <h2>Here you can find cards of MTG</h2>
+      <form id="searchForm" action="/result" method="POST">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-10 col-form-label">Enter card name to search:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="card name" name="cardName" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-5 col-form-label">Sort by:</label>
+          <div class="col-sm-10">
+            <select id="sort" class="form-control">
+              <option selected></option>
+              <option value="prices.usd">Price</option>
+              <option value="cmc">Converted manacost</option>
+              <option value="name">A-z</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-15" style="margin-top: 37px;">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+      <br>
+      <div id="searchResult"></div>
+    </div>
+  </div>
+</div>
+
+{{!-- <form id="searchForm" action="/result" method="POST">
+    <ul>
+      <li>
+        <label>Sort by:</label>
+        <select id="sort">
+          <option selected></option>
+          <option value="prices.usd">Price</option>
+          <option value="cmc">Converted manacost</option>
+          <option value="name">A-z</option>
+        </select>
+      </li>
+
+      <li>
+        <label>Enter card name to search:</label>
+        <input type="text" placeholder="card name" name="cardName" required>
+      </li>
+    </ul>
+
+
+    <input type="submit" value="search">
+  </form>
+  <div id="searchResult"></div> --}}
