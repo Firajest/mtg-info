@@ -1,6 +1,4 @@
 # mtg-info
-
-Description: <br>
 Application for MTG players, here you can search cards and there is a prototype function to create decks.
 You can sort a search result by choosing an option before searching.
 <br>
